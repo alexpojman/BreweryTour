@@ -1,0 +1,927 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0BC571BB5DB497EDE1BAA21D /* Pods_Brewery_Tour.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2199518F42AB7D6C2AD0BC8C /* Pods_Brewery_Tour.framework */; };
+		220031F0C714824F352E72E2 /* Pods_Brewery_TourTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A24F4A2C855D46706A0158D9 /* Pods_Brewery_TourTests.framework */; };
+		ED0581491DFE0FE60019789F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0581481DFE0FE60019789F /* AppDelegate.swift */; };
+		ED05814D1DFE0FE60019789F /* BreweryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED05814C1DFE0FE60019789F /* BreweryListViewController.swift */; };
+		ED0581501DFE0FE60019789F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED05814E1DFE0FE60019789F /* Main.storyboard */; };
+		ED0581521DFE0FE60019789F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED0581511DFE0FE60019789F /* Assets.xcassets */; };
+		ED0581551DFE0FE60019789F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED0581531DFE0FE60019789F /* LaunchScreen.storyboard */; };
+		ED0581601DFE0FE60019789F /* Brewery_TourTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED05815F1DFE0FE60019789F /* Brewery_TourTests.swift */; };
+		ED05816B1DFE0FE60019789F /* Brewery_TourUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED05816A1DFE0FE60019789F /* Brewery_TourUITests.swift */; };
+		ED076EC31E024D6100893F4F /* Brewery.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED076EC21E024D6100893F4F /* Brewery.swift */; };
+		ED076EC51E024EF500893F4F /* Beer.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED076EC41E024EF500893F4F /* Beer.swift */; };
+		ED076EC81E025DBA00893F4F /* brewery.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ED076EC71E025DBA00893F4F /* brewery.jpg */; };
+		ED076ECA1E037C3900893F4F /* CheckInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED076EC91E037C3900893F4F /* CheckInViewController.swift */; };
+		ED0A944C1E037E92005DE678 /* btn-close.png in Resources */ = {isa = PBXBuildFile; fileRef = ED0A944B1E037E92005DE678 /* btn-close.png */; };
+		ED0A944E1E0CAF06005DE678 /* BreweryAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0A944D1E0CAF06005DE678 /* BreweryAnnotationView.swift */; };
+		ED268EDC1DFE46C800E81FDE /* BreweryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED268EDB1DFE46C800E81FDE /* BreweryCell.swift */; };
+		ED268EE81DFE48CA00E81FDE /* Cabin-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ED268EE01DFE48CA00E81FDE /* Cabin-Bold.ttf */; };
+		ED268EE91DFE48CA00E81FDE /* Cabin-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ED268EE11DFE48CA00E81FDE /* Cabin-BoldItalic.ttf */; };
+		ED268EEA1DFE48CA00E81FDE /* Cabin-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ED268EE21DFE48CA00E81FDE /* Cabin-Italic.ttf */; };
+		ED268EEB1DFE48CA00E81FDE /* Cabin-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ED268EE31DFE48CA00E81FDE /* Cabin-Medium.ttf */; };
+		ED268EEC1DFE48CA00E81FDE /* Cabin-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ED268EE41DFE48CA00E81FDE /* Cabin-MediumItalic.ttf */; };
+		ED268EED1DFE48CA00E81FDE /* Cabin-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ED268EE51DFE48CA00E81FDE /* Cabin-Regular.ttf */; };
+		ED268EEE1DFE48CA00E81FDE /* Cabin-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ED268EE61DFE48CA00E81FDE /* Cabin-SemiBold.ttf */; };
+		ED268EEF1DFE48CA00E81FDE /* Cabin-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ED268EE71DFE48CA00E81FDE /* Cabin-SemiBoldItalic.ttf */; };
+		ED268F021DFE495900E81FDE /* Raleway-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ED268EF01DFE495900E81FDE /* Raleway-Black.ttf */; };
+		ED268F031DFE495900E81FDE /* Raleway-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ED268EF11DFE495900E81FDE /* Raleway-BlackItalic.ttf */; };
+		ED268F041DFE495900E81FDE /* Raleway-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ED268EF21DFE495900E81FDE /* Raleway-Bold.ttf */; };
+		ED268F051DFE495900E81FDE /* Raleway-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ED268EF31DFE495900E81FDE /* Raleway-BoldItalic.ttf */; };
+		ED268F061DFE495900E81FDE /* Raleway-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ED268EF41DFE495900E81FDE /* Raleway-ExtraBold.ttf */; };
+		ED268F071DFE495900E81FDE /* Raleway-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ED268EF51DFE495900E81FDE /* Raleway-ExtraBoldItalic.ttf */; };
+		ED268F081DFE495900E81FDE /* Raleway-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ED268EF61DFE495900E81FDE /* Raleway-ExtraLight.ttf */; };
+		ED268F091DFE495900E81FDE /* Raleway-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ED268EF71DFE495900E81FDE /* Raleway-ExtraLightItalic.ttf */; };
+		ED268F0A1DFE495900E81FDE /* Raleway-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ED268EF81DFE495900E81FDE /* Raleway-Italic.ttf */; };
+		ED268F0B1DFE495900E81FDE /* Raleway-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ED268EF91DFE495900E81FDE /* Raleway-Light.ttf */; };
+		ED268F0C1DFE495900E81FDE /* Raleway-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ED268EFA1DFE495900E81FDE /* Raleway-LightItalic.ttf */; };
+		ED268F0D1DFE495900E81FDE /* Raleway-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ED268EFB1DFE495900E81FDE /* Raleway-Medium.ttf */; };
+		ED268F0E1DFE495900E81FDE /* Raleway-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ED268EFC1DFE495900E81FDE /* Raleway-MediumItalic.ttf */; };
+		ED268F0F1DFE495900E81FDE /* Raleway-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ED268EFD1DFE495900E81FDE /* Raleway-Regular.ttf */; };
+		ED268F101DFE495900E81FDE /* Raleway-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ED268EFE1DFE495900E81FDE /* Raleway-SemiBold.ttf */; };
+		ED268F111DFE495900E81FDE /* Raleway-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ED268EFF1DFE495900E81FDE /* Raleway-SemiBoldItalic.ttf */; };
+		ED268F121DFE495900E81FDE /* Raleway-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ED268F001DFE495900E81FDE /* Raleway-Thin.ttf */; };
+		ED268F131DFE495900E81FDE /* Raleway-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ED268F011DFE495900E81FDE /* Raleway-ThinItalic.ttf */; };
+		ED268F151DFE4C3D00E81FDE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ED268F141DFE4C3D00E81FDE /* GoogleService-Info.plist */; };
+		ED268F161DFE4C3D00E81FDE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ED268F141DFE4C3D00E81FDE /* GoogleService-Info.plist */; };
+		ED268F171DFE4C3D00E81FDE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ED268F141DFE4C3D00E81FDE /* GoogleService-Info.plist */; };
+		ED368A571E0DA47C003B3EC6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED368A561E0DA47C003B3EC6 /* LoginViewController.swift */; };
+		ED755D781E00C3F500C03EB9 /* BreweryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED755D771E00C3F500C03EB9 /* BreweryDetailViewController.swift */; };
+		ED755D7B1E00DE3900C03EB9 /* MMsquare.png in Resources */ = {isa = PBXBuildFile; fileRef = ED755D7A1E00DE3900C03EB9 /* MMsquare.png */; };
+		F7BC85B5F059A8F6AF46C355 /* Pods_Brewery_TourUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FECDE69D75A032D676350B3B /* Pods_Brewery_TourUITests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		ED05815C1DFE0FE60019789F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ED05813D1DFE0FE50019789F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ED0581441DFE0FE50019789F;
+			remoteInfo = "Brewery Tour";
+		};
+		ED0581671DFE0FE60019789F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ED05813D1DFE0FE50019789F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ED0581441DFE0FE50019789F;
+			remoteInfo = "Brewery Tour";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1A01D5050076193A94A948AC /* Pods-Brewery TourTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Brewery TourTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Brewery TourTests/Pods-Brewery TourTests.debug.xcconfig"; sourceTree = "<group>"; };
+		2199518F42AB7D6C2AD0BC8C /* Pods_Brewery_Tour.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Brewery_Tour.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		26306CBECE44AC383AA92D5D /* Pods-Brewery TourUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Brewery TourUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Brewery TourUITests/Pods-Brewery TourUITests.release.xcconfig"; sourceTree = "<group>"; };
+		A24F4A2C855D46706A0158D9 /* Pods_Brewery_TourTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Brewery_TourTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A759C44200C36152B6D9A4C8 /* Pods-Brewery TourTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Brewery TourTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Brewery TourTests/Pods-Brewery TourTests.release.xcconfig"; sourceTree = "<group>"; };
+		B24611268B7ED93B024FEEB5 /* Pods-Brewery TourUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Brewery TourUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Brewery TourUITests/Pods-Brewery TourUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		DDF11D56D18258E5AC8EC11D /* Pods-Brewery Tour.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Brewery Tour.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Brewery Tour/Pods-Brewery Tour.debug.xcconfig"; sourceTree = "<group>"; };
+		ED0581451DFE0FE60019789F /* Brewery Tour.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Brewery Tour.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED0581481DFE0FE60019789F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		ED05814C1DFE0FE60019789F /* BreweryListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreweryListViewController.swift; sourceTree = "<group>"; };
+		ED05814F1DFE0FE60019789F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		ED0581511DFE0FE60019789F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		ED0581541DFE0FE60019789F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		ED0581561DFE0FE60019789F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ED05815B1DFE0FE60019789F /* Brewery TourTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Brewery TourTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED05815F1DFE0FE60019789F /* Brewery_TourTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Brewery_TourTests.swift; sourceTree = "<group>"; };
+		ED0581611DFE0FE60019789F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ED0581661DFE0FE60019789F /* Brewery TourUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Brewery TourUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED05816A1DFE0FE60019789F /* Brewery_TourUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Brewery_TourUITests.swift; sourceTree = "<group>"; };
+		ED05816C1DFE0FE60019789F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ED076EC21E024D6100893F4F /* Brewery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Brewery.swift; sourceTree = "<group>"; };
+		ED076EC41E024EF500893F4F /* Beer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Beer.swift; sourceTree = "<group>"; };
+		ED076EC71E025DBA00893F4F /* brewery.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = brewery.jpg; sourceTree = "<group>"; };
+		ED076EC91E037C3900893F4F /* CheckInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckInViewController.swift; sourceTree = "<group>"; };
+		ED0A944B1E037E92005DE678 /* btn-close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn-close.png"; sourceTree = "<group>"; };
+		ED0A944D1E0CAF06005DE678 /* BreweryAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BreweryAnnotationView.swift; sourceTree = "<group>"; };
+		ED268EDB1DFE46C800E81FDE /* BreweryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BreweryCell.swift; sourceTree = "<group>"; };
+		ED268EE01DFE48CA00E81FDE /* Cabin-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cabin-Bold.ttf"; sourceTree = "<group>"; };
+		ED268EE11DFE48CA00E81FDE /* Cabin-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cabin-BoldItalic.ttf"; sourceTree = "<group>"; };
+		ED268EE21DFE48CA00E81FDE /* Cabin-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cabin-Italic.ttf"; sourceTree = "<group>"; };
+		ED268EE31DFE48CA00E81FDE /* Cabin-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cabin-Medium.ttf"; sourceTree = "<group>"; };
+		ED268EE41DFE48CA00E81FDE /* Cabin-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cabin-MediumItalic.ttf"; sourceTree = "<group>"; };
+		ED268EE51DFE48CA00E81FDE /* Cabin-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cabin-Regular.ttf"; sourceTree = "<group>"; };
+		ED268EE61DFE48CA00E81FDE /* Cabin-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cabin-SemiBold.ttf"; sourceTree = "<group>"; };
+		ED268EE71DFE48CA00E81FDE /* Cabin-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cabin-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		ED268EF01DFE495900E81FDE /* Raleway-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Black.ttf"; sourceTree = "<group>"; };
+		ED268EF11DFE495900E81FDE /* Raleway-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-BlackItalic.ttf"; sourceTree = "<group>"; };
+		ED268EF21DFE495900E81FDE /* Raleway-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Bold.ttf"; sourceTree = "<group>"; };
+		ED268EF31DFE495900E81FDE /* Raleway-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-BoldItalic.ttf"; sourceTree = "<group>"; };
+		ED268EF41DFE495900E81FDE /* Raleway-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-ExtraBold.ttf"; sourceTree = "<group>"; };
+		ED268EF51DFE495900E81FDE /* Raleway-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		ED268EF61DFE495900E81FDE /* Raleway-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-ExtraLight.ttf"; sourceTree = "<group>"; };
+		ED268EF71DFE495900E81FDE /* Raleway-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
+		ED268EF81DFE495900E81FDE /* Raleway-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Italic.ttf"; sourceTree = "<group>"; };
+		ED268EF91DFE495900E81FDE /* Raleway-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Light.ttf"; sourceTree = "<group>"; };
+		ED268EFA1DFE495900E81FDE /* Raleway-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-LightItalic.ttf"; sourceTree = "<group>"; };
+		ED268EFB1DFE495900E81FDE /* Raleway-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Medium.ttf"; sourceTree = "<group>"; };
+		ED268EFC1DFE495900E81FDE /* Raleway-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-MediumItalic.ttf"; sourceTree = "<group>"; };
+		ED268EFD1DFE495900E81FDE /* Raleway-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Regular.ttf"; sourceTree = "<group>"; };
+		ED268EFE1DFE495900E81FDE /* Raleway-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-SemiBold.ttf"; sourceTree = "<group>"; };
+		ED268EFF1DFE495900E81FDE /* Raleway-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		ED268F001DFE495900E81FDE /* Raleway-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Thin.ttf"; sourceTree = "<group>"; };
+		ED268F011DFE495900E81FDE /* Raleway-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-ThinItalic.ttf"; sourceTree = "<group>"; };
+		ED268F141DFE4C3D00E81FDE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../GoogleService-Info.plist"; sourceTree = "<group>"; };
+		ED368A561E0DA47C003B3EC6 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		ED755D771E00C3F500C03EB9 /* BreweryDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BreweryDetailViewController.swift; sourceTree = "<group>"; };
+		ED755D7A1E00DE3900C03EB9 /* MMsquare.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MMsquare.png; sourceTree = "<group>"; };
+		FECDE69D75A032D676350B3B /* Pods_Brewery_TourUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Brewery_TourUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FFB437874963859D69B20604 /* Pods-Brewery Tour.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Brewery Tour.release.xcconfig"; path = "Pods/Target Support Files/Pods-Brewery Tour/Pods-Brewery Tour.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		ED0581421DFE0FE50019789F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0BC571BB5DB497EDE1BAA21D /* Pods_Brewery_Tour.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED0581581DFE0FE60019789F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				220031F0C714824F352E72E2 /* Pods_Brewery_TourTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED0581631DFE0FE60019789F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F7BC85B5F059A8F6AF46C355 /* Pods_Brewery_TourUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		45D8C69BD832B80549B98288 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2199518F42AB7D6C2AD0BC8C /* Pods_Brewery_Tour.framework */,
+				A24F4A2C855D46706A0158D9 /* Pods_Brewery_TourTests.framework */,
+				FECDE69D75A032D676350B3B /* Pods_Brewery_TourUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		75C8CB76A1FF248A0A39EF54 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DDF11D56D18258E5AC8EC11D /* Pods-Brewery Tour.debug.xcconfig */,
+				FFB437874963859D69B20604 /* Pods-Brewery Tour.release.xcconfig */,
+				1A01D5050076193A94A948AC /* Pods-Brewery TourTests.debug.xcconfig */,
+				A759C44200C36152B6D9A4C8 /* Pods-Brewery TourTests.release.xcconfig */,
+				B24611268B7ED93B024FEEB5 /* Pods-Brewery TourUITests.debug.xcconfig */,
+				26306CBECE44AC383AA92D5D /* Pods-Brewery TourUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		ED05813C1DFE0FE50019789F = {
+			isa = PBXGroup;
+			children = (
+				ED0581471DFE0FE60019789F /* Brewery Tour */,
+				ED05815E1DFE0FE60019789F /* Brewery TourTests */,
+				ED0581691DFE0FE60019789F /* Brewery TourUITests */,
+				ED0581461DFE0FE60019789F /* Products */,
+				75C8CB76A1FF248A0A39EF54 /* Pods */,
+				45D8C69BD832B80549B98288 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		ED0581461DFE0FE60019789F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ED0581451DFE0FE60019789F /* Brewery Tour.app */,
+				ED05815B1DFE0FE60019789F /* Brewery TourTests.xctest */,
+				ED0581661DFE0FE60019789F /* Brewery TourUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ED0581471DFE0FE60019789F /* Brewery Tour */ = {
+			isa = PBXGroup;
+			children = (
+				ED076EC61E025A9900893F4F /* Models */,
+				ED755D791E00DE2A00C03EB9 /* Images */,
+				ED268F141DFE4C3D00E81FDE /* GoogleService-Info.plist */,
+				ED268EDD1DFE488D00E81FDE /* Fonts */,
+				ED0581481DFE0FE60019789F /* AppDelegate.swift */,
+				ED05814C1DFE0FE60019789F /* BreweryListViewController.swift */,
+				ED0A944D1E0CAF06005DE678 /* BreweryAnnotationView.swift */,
+				ED755D771E00C3F500C03EB9 /* BreweryDetailViewController.swift */,
+				ED05814E1DFE0FE60019789F /* Main.storyboard */,
+				ED368A561E0DA47C003B3EC6 /* LoginViewController.swift */,
+				ED076EC91E037C3900893F4F /* CheckInViewController.swift */,
+				ED0581511DFE0FE60019789F /* Assets.xcassets */,
+				ED0581531DFE0FE60019789F /* LaunchScreen.storyboard */,
+				ED0581561DFE0FE60019789F /* Info.plist */,
+			);
+			path = "Brewery Tour";
+			sourceTree = "<group>";
+		};
+		ED05815E1DFE0FE60019789F /* Brewery TourTests */ = {
+			isa = PBXGroup;
+			children = (
+				ED05815F1DFE0FE60019789F /* Brewery_TourTests.swift */,
+				ED0581611DFE0FE60019789F /* Info.plist */,
+			);
+			path = "Brewery TourTests";
+			sourceTree = "<group>";
+		};
+		ED0581691DFE0FE60019789F /* Brewery TourUITests */ = {
+			isa = PBXGroup;
+			children = (
+				ED05816A1DFE0FE60019789F /* Brewery_TourUITests.swift */,
+				ED05816C1DFE0FE60019789F /* Info.plist */,
+			);
+			path = "Brewery TourUITests";
+			sourceTree = "<group>";
+		};
+		ED076EC61E025A9900893F4F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				ED268EDB1DFE46C800E81FDE /* BreweryCell.swift */,
+				ED076EC21E024D6100893F4F /* Brewery.swift */,
+				ED076EC41E024EF500893F4F /* Beer.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		ED268EDD1DFE488D00E81FDE /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				ED268EDF1DFE48B400E81FDE /* Cabin */,
+				ED268EDE1DFE48AD00E81FDE /* Raleway */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
+		ED268EDE1DFE48AD00E81FDE /* Raleway */ = {
+			isa = PBXGroup;
+			children = (
+				ED268EF01DFE495900E81FDE /* Raleway-Black.ttf */,
+				ED268EF11DFE495900E81FDE /* Raleway-BlackItalic.ttf */,
+				ED268EF21DFE495900E81FDE /* Raleway-Bold.ttf */,
+				ED268EF31DFE495900E81FDE /* Raleway-BoldItalic.ttf */,
+				ED268EF41DFE495900E81FDE /* Raleway-ExtraBold.ttf */,
+				ED268EF51DFE495900E81FDE /* Raleway-ExtraBoldItalic.ttf */,
+				ED268EF61DFE495900E81FDE /* Raleway-ExtraLight.ttf */,
+				ED268EF71DFE495900E81FDE /* Raleway-ExtraLightItalic.ttf */,
+				ED268EF81DFE495900E81FDE /* Raleway-Italic.ttf */,
+				ED268EF91DFE495900E81FDE /* Raleway-Light.ttf */,
+				ED268EFA1DFE495900E81FDE /* Raleway-LightItalic.ttf */,
+				ED268EFB1DFE495900E81FDE /* Raleway-Medium.ttf */,
+				ED268EFC1DFE495900E81FDE /* Raleway-MediumItalic.ttf */,
+				ED268EFD1DFE495900E81FDE /* Raleway-Regular.ttf */,
+				ED268EFE1DFE495900E81FDE /* Raleway-SemiBold.ttf */,
+				ED268EFF1DFE495900E81FDE /* Raleway-SemiBoldItalic.ttf */,
+				ED268F001DFE495900E81FDE /* Raleway-Thin.ttf */,
+				ED268F011DFE495900E81FDE /* Raleway-ThinItalic.ttf */,
+			);
+			name = Raleway;
+			sourceTree = "<group>";
+		};
+		ED268EDF1DFE48B400E81FDE /* Cabin */ = {
+			isa = PBXGroup;
+			children = (
+				ED268EE01DFE48CA00E81FDE /* Cabin-Bold.ttf */,
+				ED268EE11DFE48CA00E81FDE /* Cabin-BoldItalic.ttf */,
+				ED268EE21DFE48CA00E81FDE /* Cabin-Italic.ttf */,
+				ED268EE31DFE48CA00E81FDE /* Cabin-Medium.ttf */,
+				ED268EE41DFE48CA00E81FDE /* Cabin-MediumItalic.ttf */,
+				ED268EE51DFE48CA00E81FDE /* Cabin-Regular.ttf */,
+				ED268EE61DFE48CA00E81FDE /* Cabin-SemiBold.ttf */,
+				ED268EE71DFE48CA00E81FDE /* Cabin-SemiBoldItalic.ttf */,
+			);
+			name = Cabin;
+			sourceTree = "<group>";
+		};
+		ED755D791E00DE2A00C03EB9 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				ED0A944B1E037E92005DE678 /* btn-close.png */,
+				ED076EC71E025DBA00893F4F /* brewery.jpg */,
+				ED755D7A1E00DE3900C03EB9 /* MMsquare.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		ED0581441DFE0FE50019789F /* Brewery Tour */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ED05816F1DFE0FE60019789F /* Build configuration list for PBXNativeTarget "Brewery Tour" */;
+			buildPhases = (
+				66B6D2C23EC8CACC43DE2C4C /* [CP] Check Pods Manifest.lock */,
+				ED0581411DFE0FE50019789F /* Sources */,
+				ED0581421DFE0FE50019789F /* Frameworks */,
+				ED0581431DFE0FE50019789F /* Resources */,
+				0B7973174ADE0A88033B4C90 /* [CP] Embed Pods Frameworks */,
+				B9ECDBA902596EBE90EF3575 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Brewery Tour";
+			productName = "Brewery Tour";
+			productReference = ED0581451DFE0FE60019789F /* Brewery Tour.app */;
+			productType = "com.apple.product-type.application";
+		};
+		ED05815A1DFE0FE60019789F /* Brewery TourTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ED0581721DFE0FE60019789F /* Build configuration list for PBXNativeTarget "Brewery TourTests" */;
+			buildPhases = (
+				03D98B2F91BC4040B6F97E57 /* [CP] Check Pods Manifest.lock */,
+				ED0581571DFE0FE60019789F /* Sources */,
+				ED0581581DFE0FE60019789F /* Frameworks */,
+				ED0581591DFE0FE60019789F /* Resources */,
+				F8D7E531B227E2B64C73C2DD /* [CP] Embed Pods Frameworks */,
+				0C9956CB4C282BE2FAB4E442 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ED05815D1DFE0FE60019789F /* PBXTargetDependency */,
+			);
+			name = "Brewery TourTests";
+			productName = "Brewery TourTests";
+			productReference = ED05815B1DFE0FE60019789F /* Brewery TourTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		ED0581651DFE0FE60019789F /* Brewery TourUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ED0581751DFE0FE60019789F /* Build configuration list for PBXNativeTarget "Brewery TourUITests" */;
+			buildPhases = (
+				BA9EDB382382F673A41D8C34 /* [CP] Check Pods Manifest.lock */,
+				ED0581621DFE0FE60019789F /* Sources */,
+				ED0581631DFE0FE60019789F /* Frameworks */,
+				ED0581641DFE0FE60019789F /* Resources */,
+				0E7F4A3127A9D4D1F8574D78 /* [CP] Embed Pods Frameworks */,
+				2B6CBB622008B8CA4CE5CCB6 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ED0581681DFE0FE60019789F /* PBXTargetDependency */,
+			);
+			name = "Brewery TourUITests";
+			productName = "Brewery TourUITests";
+			productReference = ED0581661DFE0FE60019789F /* Brewery TourUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		ED05813D1DFE0FE50019789F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = "Alexander Pojman";
+				TargetAttributes = {
+					ED0581441DFE0FE50019789F = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = KY69WXGH46;
+						ProvisioningStyle = Automatic;
+					};
+					ED05815A1DFE0FE60019789F = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = KY69WXGH46;
+						ProvisioningStyle = Automatic;
+						TestTargetID = ED0581441DFE0FE50019789F;
+					};
+					ED0581651DFE0FE60019789F = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = KY69WXGH46;
+						ProvisioningStyle = Automatic;
+						TestTargetID = ED0581441DFE0FE50019789F;
+					};
+				};
+			};
+			buildConfigurationList = ED0581401DFE0FE50019789F /* Build configuration list for PBXProject "Brewery Tour" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = ED05813C1DFE0FE50019789F;
+			productRefGroup = ED0581461DFE0FE60019789F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				ED0581441DFE0FE50019789F /* Brewery Tour */,
+				ED05815A1DFE0FE60019789F /* Brewery TourTests */,
+				ED0581651DFE0FE60019789F /* Brewery TourUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		ED0581431DFE0FE50019789F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED268EE91DFE48CA00E81FDE /* Cabin-BoldItalic.ttf in Resources */,
+				ED268F131DFE495900E81FDE /* Raleway-ThinItalic.ttf in Resources */,
+				ED268EEE1DFE48CA00E81FDE /* Cabin-SemiBold.ttf in Resources */,
+				ED268F081DFE495900E81FDE /* Raleway-ExtraLight.ttf in Resources */,
+				ED268F0B1DFE495900E81FDE /* Raleway-Light.ttf in Resources */,
+				ED268EEF1DFE48CA00E81FDE /* Cabin-SemiBoldItalic.ttf in Resources */,
+				ED0581551DFE0FE60019789F /* LaunchScreen.storyboard in Resources */,
+				ED268F091DFE495900E81FDE /* Raleway-ExtraLightItalic.ttf in Resources */,
+				ED268F0A1DFE495900E81FDE /* Raleway-Italic.ttf in Resources */,
+				ED268EE81DFE48CA00E81FDE /* Cabin-Bold.ttf in Resources */,
+				ED268F111DFE495900E81FDE /* Raleway-SemiBoldItalic.ttf in Resources */,
+				ED268F101DFE495900E81FDE /* Raleway-SemiBold.ttf in Resources */,
+				ED268EEC1DFE48CA00E81FDE /* Cabin-MediumItalic.ttf in Resources */,
+				ED268EEB1DFE48CA00E81FDE /* Cabin-Medium.ttf in Resources */,
+				ED268F121DFE495900E81FDE /* Raleway-Thin.ttf in Resources */,
+				ED268F0F1DFE495900E81FDE /* Raleway-Regular.ttf in Resources */,
+				ED268F071DFE495900E81FDE /* Raleway-ExtraBoldItalic.ttf in Resources */,
+				ED268F151DFE4C3D00E81FDE /* GoogleService-Info.plist in Resources */,
+				ED268F041DFE495900E81FDE /* Raleway-Bold.ttf in Resources */,
+				ED268F061DFE495900E81FDE /* Raleway-ExtraBold.ttf in Resources */,
+				ED0581521DFE0FE60019789F /* Assets.xcassets in Resources */,
+				ED268F021DFE495900E81FDE /* Raleway-Black.ttf in Resources */,
+				ED268EEA1DFE48CA00E81FDE /* Cabin-Italic.ttf in Resources */,
+				ED268F031DFE495900E81FDE /* Raleway-BlackItalic.ttf in Resources */,
+				ED755D7B1E00DE3900C03EB9 /* MMsquare.png in Resources */,
+				ED268F051DFE495900E81FDE /* Raleway-BoldItalic.ttf in Resources */,
+				ED076EC81E025DBA00893F4F /* brewery.jpg in Resources */,
+				ED268F0C1DFE495900E81FDE /* Raleway-LightItalic.ttf in Resources */,
+				ED0A944C1E037E92005DE678 /* btn-close.png in Resources */,
+				ED0581501DFE0FE60019789F /* Main.storyboard in Resources */,
+				ED268F0E1DFE495900E81FDE /* Raleway-MediumItalic.ttf in Resources */,
+				ED268EED1DFE48CA00E81FDE /* Cabin-Regular.ttf in Resources */,
+				ED268F0D1DFE495900E81FDE /* Raleway-Medium.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED0581591DFE0FE60019789F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED268F161DFE4C3D00E81FDE /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED0581641DFE0FE60019789F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED268F171DFE4C3D00E81FDE /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		03D98B2F91BC4040B6F97E57 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		0B7973174ADE0A88033B4C90 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Brewery Tour/Pods-Brewery Tour-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0C9956CB4C282BE2FAB4E442 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Brewery TourTests/Pods-Brewery TourTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0E7F4A3127A9D4D1F8574D78 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Brewery TourUITests/Pods-Brewery TourUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2B6CBB622008B8CA4CE5CCB6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Brewery TourUITests/Pods-Brewery TourUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		66B6D2C23EC8CACC43DE2C4C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B9ECDBA902596EBE90EF3575 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Brewery Tour/Pods-Brewery Tour-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BA9EDB382382F673A41D8C34 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F8D7E531B227E2B64C73C2DD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Brewery TourTests/Pods-Brewery TourTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		ED0581411DFE0FE50019789F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED368A571E0DA47C003B3EC6 /* LoginViewController.swift in Sources */,
+				ED268EDC1DFE46C800E81FDE /* BreweryCell.swift in Sources */,
+				ED076EC51E024EF500893F4F /* Beer.swift in Sources */,
+				ED05814D1DFE0FE60019789F /* BreweryListViewController.swift in Sources */,
+				ED0581491DFE0FE60019789F /* AppDelegate.swift in Sources */,
+				ED0A944E1E0CAF06005DE678 /* BreweryAnnotationView.swift in Sources */,
+				ED076EC31E024D6100893F4F /* Brewery.swift in Sources */,
+				ED755D781E00C3F500C03EB9 /* BreweryDetailViewController.swift in Sources */,
+				ED076ECA1E037C3900893F4F /* CheckInViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED0581571DFE0FE60019789F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED0581601DFE0FE60019789F /* Brewery_TourTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED0581621DFE0FE60019789F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED05816B1DFE0FE60019789F /* Brewery_TourUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		ED05815D1DFE0FE60019789F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ED0581441DFE0FE50019789F /* Brewery Tour */;
+			targetProxy = ED05815C1DFE0FE60019789F /* PBXContainerItemProxy */;
+		};
+		ED0581681DFE0FE60019789F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ED0581441DFE0FE50019789F /* Brewery Tour */;
+			targetProxy = ED0581671DFE0FE60019789F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		ED05814E1DFE0FE60019789F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ED05814F1DFE0FE60019789F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		ED0581531DFE0FE60019789F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ED0581541DFE0FE60019789F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		ED05816D1DFE0FE60019789F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		ED05816E1DFE0FE60019789F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		ED0581701DFE0FE60019789F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DDF11D56D18258E5AC8EC11D /* Pods-Brewery Tour.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = KY69WXGH46;
+				INFOPLIST_FILE = "Brewery Tour/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "yaboiinc.Brewery-Tour";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		ED0581711DFE0FE60019789F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FFB437874963859D69B20604 /* Pods-Brewery Tour.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = KY69WXGH46;
+				INFOPLIST_FILE = "Brewery Tour/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "yaboiinc.Brewery-Tour";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		ED0581731DFE0FE60019789F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1A01D5050076193A94A948AC /* Pods-Brewery TourTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = KY69WXGH46;
+				INFOPLIST_FILE = "Brewery TourTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "yaboiinc.Brewery-TourTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Brewery Tour.app/Brewery Tour";
+			};
+			name = Debug;
+		};
+		ED0581741DFE0FE60019789F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A759C44200C36152B6D9A4C8 /* Pods-Brewery TourTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = KY69WXGH46;
+				INFOPLIST_FILE = "Brewery TourTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "yaboiinc.Brewery-TourTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Brewery Tour.app/Brewery Tour";
+			};
+			name = Release;
+		};
+		ED0581761DFE0FE60019789F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B24611268B7ED93B024FEEB5 /* Pods-Brewery TourUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = KY69WXGH46;
+				INFOPLIST_FILE = "Brewery TourUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "yaboiinc.Brewery-TourUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "Brewery Tour";
+			};
+			name = Debug;
+		};
+		ED0581771DFE0FE60019789F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 26306CBECE44AC383AA92D5D /* Pods-Brewery TourUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = KY69WXGH46;
+				INFOPLIST_FILE = "Brewery TourUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "yaboiinc.Brewery-TourUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "Brewery Tour";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		ED0581401DFE0FE50019789F /* Build configuration list for PBXProject "Brewery Tour" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED05816D1DFE0FE60019789F /* Debug */,
+				ED05816E1DFE0FE60019789F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ED05816F1DFE0FE60019789F /* Build configuration list for PBXNativeTarget "Brewery Tour" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED0581701DFE0FE60019789F /* Debug */,
+				ED0581711DFE0FE60019789F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ED0581721DFE0FE60019789F /* Build configuration list for PBXNativeTarget "Brewery TourTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED0581731DFE0FE60019789F /* Debug */,
+				ED0581741DFE0FE60019789F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ED0581751DFE0FE60019789F /* Build configuration list for PBXNativeTarget "Brewery TourUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED0581761DFE0FE60019789F /* Debug */,
+				ED0581771DFE0FE60019789F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = ED05813D1DFE0FE50019789F /* Project object */;
+}

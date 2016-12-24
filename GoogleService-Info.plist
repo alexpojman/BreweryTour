@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>118551473062-qotcmipd5d44fjv0khtk9ogaimj97c6h.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.118551473062-qotcmipd5d44fjv0khtk9ogaimj97c6h</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCRcdZ7Jx--C0KlALvwz5SXA_OodoXsas8</string>
+	<key>GCM_SENDER_ID</key>
+	<string>118551473062</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>yaboiinc.Brewery-Tour</string>
+	<key>PROJECT_ID</key>
+	<string>brewery-tour-fd4f9</string>
+	<key>STORAGE_BUCKET</key>
+	<string>brewery-tour-fd4f9.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true/>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false/>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false/>
+	<key>IS_GCM_ENABLED</key>
+	<true/>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true/>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:118551473062:ios:a73e0e21a16c19d1</string>
+	<key>DATABASE_URL</key>
+	<string>https://brewery-tour-fd4f9.firebaseio.com</string>
+</dict>
+</plist>
