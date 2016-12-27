@@ -27,6 +27,7 @@ class BreweryListViewController: UIViewController, UICollectionViewDataSource, U
     fileprivate let itemsPerRow: CGFloat = 2
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         
         self.mkMap.delegate = self
@@ -39,10 +40,15 @@ class BreweryListViewController: UIViewController, UICollectionViewDataSource, U
         ref.child("breweries").queryOrdered(byChild: "name").observe(.value, with: { snapshot in
             for item in snapshot.children {
                 let name = (item as! FIRDataSnapshot).childSnapshot(forPath: "name").value as! String
+                var desc = (item as! FIRDataSnapshot).childSnapshot(forPath: "description").value as? String
                 let lat = (item as! FIRDataSnapshot).childSnapshot(forPath: "location").childSnapshot(forPath: "lat").value as! Double
                 let lng = (item as! FIRDataSnapshot).childSnapshot(forPath: "location").childSnapshot(forPath: "lng").value as! Double
                 
-                let newBrewery = Brewery(title: name, desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.", dbID: (item as! FIRDataSnapshot).key, profileImage: UIImage(named: "brewery.jpg"), coordinate: CLLocationCoordinate2D(latitude: lat, longitude: lng))
+                if (desc == nil) {
+                    desc = "No Description Available"
+                }
+                
+                let newBrewery = Brewery(title: name, desc: desc!, dbID: (item as! FIRDataSnapshot).key, profileImage: UIImage(named: "brewery.jpg"), coordinate: CLLocationCoordinate2D(latitude: lat, longitude: lng))
                 
                 self.breweries.append(newBrewery)
             }
@@ -86,6 +92,7 @@ class BreweryListViewController: UIViewController, UICollectionViewDataSource, U
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier,
                                                       for: indexPath) as! BreweryCell
         
+        // Configure the custom cell
         cell.backgroundColor = UIColor.black
         cell.breweryImage.image = self.breweries[indexPath.item].profileImage
         cell.breweryNameLabel.text = self.breweries[indexPath.item].title?.uppercased()
@@ -95,7 +102,6 @@ class BreweryListViewController: UIViewController, UICollectionViewDataSource, U
         attributedString.addAttribute(NSKernAttributeName, value: CGFloat(5.5), range: NSRange(location: 0, length: attributedString.length))
         cell.breweryNameLabel.attributedText = attributedString
         
-        // Configure the cell
         return cell
     }
     
@@ -121,6 +127,7 @@ class BreweryListViewController: UIViewController, UICollectionViewDataSource, U
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        
         let location = locations.last
         
         let center = CLLocationCoordinate2D(latitude: location!.coordinate.latitude, longitude: location!.coordinate.longitude)

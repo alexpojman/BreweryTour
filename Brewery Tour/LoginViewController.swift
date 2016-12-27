@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import FirebaseDatabase
 
 class LoginViewController: UIViewController {
 
@@ -22,32 +23,45 @@ class LoginViewController: UIViewController {
     @IBOutlet var signUpButton: UIButton!
     @IBOutlet var loginButton: UIButton!
     @IBOutlet var warningLabel: UILabel!
+    @IBOutlet var buttonDividerLabel: UILabel!
+    
+    var ref: FIRDatabaseReference!
+    var currentMode: ScreenMode = .signup
+    
+    enum ScreenMode: String {
+        case login
+        case signup
+    }
     
     enum ErrorText: String {
         case invalidEmailAddress = "Invalid Email Address"
         case emailInUse = "Email Address Already in Use"
         case incorrectPassword = "Incorrect Password"
         case passwordsMismatch = "Passwords Do Not Match"
+        case weakPassword = "Password Too Short (min. 8 Characters)"
         case hasEmptyInputs = "Please Complete All Fields"
+        case unknownError = "An Error Occurred, Please Try Again"
     }
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        // Initialize Firebase Ref
+        ref = FIRDatabase.database().reference()
+        
         // Add Border to UIButton
         signUpButton.layer.borderWidth = 2
         signUpButton.layer.borderColor = UIColor.lightGray.cgColor
         
         // Set Kerning for Sign Up Button
-        signUpButton .setAttributedTitle(kerningForText(text: signUpButton.title(for: .normal)!, amount: 5.0), for: .normal)
+        signUpButton.setAttributedTitle(kerningForText(text: signUpButton.title(for: .normal)!, amount: 5.0), for: .normal)
         
         // Add Border to UIButton
         loginButton.layer.borderWidth = 2
         loginButton.layer.borderColor = UIColor.lightGray.cgColor
         
         // Set Kerning for Login Button
-        loginButton .setAttributedTitle(kerningForText(text: loginButton.title(for: .normal)!, amount: 5.0), for: .normal)
+        loginButton.setAttributedTitle(kerningForText(text: loginButton.title(for: .normal)!, amount: 5.0), for: .normal)
     }
 
     override func didReceiveMemoryWarning() {
@@ -59,44 +73,110 @@ class LoginViewController: UIViewController {
         
         let emptyInputs = self.emptyInputsList()
         
-        // Check for empty inputs
-        if (emptyInputs.count == 0) {
-            // Check if passwords match
-            if (self.passwordsDoMatch()) {
-                // Create New User
-                FIRAuth.auth()?.createUser(withEmail: emailTextField.text!, password: passwordTextField.text!) { (user, error) in
-                    // Handles Errors
-                    if (error != nil) {
-                        if let errCode = FIRAuthErrorCode(rawValue: error!._code) {
-                            switch errCode {
-                            case .errorCodeInvalidEmail:
-                                self.showWarningLabel(errorText: .invalidEmailAddress)
-                            case .errorCodeEmailAlreadyInUse:
-                                self.showWarningLabel(errorText: .emailInUse)
-                            case .errorCodeWrongPassword:
-                                self.showWarningLabel(errorText: .incorrectPassword)
-                            default:
-                                print("Create User Error: \(error)")
+        if (self.currentMode == .signup) {
+            // Check for empty inputs
+            if (emptyInputs.count == 0) {
+                // Check if passwords match
+                if (self.passwordsDoMatch()) {
+                    // Create New User
+                    FIRAuth.auth()?.createUser(withEmail: emailTextField.text!, password: passwordTextField.text!) { (user, error) in
+                        // Handles Errors
+                        if (error != nil) {
+                            if let errCode = FIRAuthErrorCode(rawValue: error!._code) {
+                                switch errCode {
+                                case .errorCodeInvalidEmail:
+                                    self.showWarningLabel(errorText: .invalidEmailAddress)
+                                case .errorCodeEmailAlreadyInUse:
+                                    self.showWarningLabel(errorText: .emailInUse)
+                                case .errorCodeWrongPassword:
+                                    self.showWarningLabel(errorText: .incorrectPassword)
+                                default:
+                                    print("Create User Error: \(error)")
+                                }
                             }
+                        } else {
+                            // Sign Up/Login Successful
+                            let userID = (user?.uid)!
+                            let userRef = self.ref.child("users")
+                            
+                            // Add User ID to standard Firebase
+                            userRef.child(userID).setValue(["name": "Alex"], withCompletionBlock: {( error, ref) in
+                                if (error == nil) {
+                                    // Go To Main Screen
+                                    self.performSegue(withIdentifier: "loginToMainScreen", sender: self)
+                                } else {
+                                    self.showWarningLabel(errorText: .unknownError)
+                                }
+                            })
                         }
-                    } else {
-                        // Sign Up/Login Successful, go to Main Screen
-                        self.performSegue(withIdentifier: "loginToMainScreen", sender: self)
                     }
+                } else {
+                    self.showWarningLabel(errorText: .passwordsMismatch)
                 }
             } else {
-                self.showWarningLabel(errorText: .passwordsMismatch)
+                emailTextField.shake()
+                // Empty Inputs are present
+                self.showWarningLabel(errorText: .hasEmptyInputs)
+                
+                // Show Shaking Animation
+                for input in emptyInputs {
+                    input.shake()
+                }
             }
-        } else {
-            emailTextField.shake()
-            // Empty Inputs are present
-            self.showWarningLabel(errorText: .hasEmptyInputs)
-            
-            // Show Shaking Animation
-            for input in emptyInputs {
-                input.shake()
+        } else if (self.currentMode == .login) {
+            FIRAuth.auth()?.signIn(withEmail: emailTextField.text!, password: passwordTextField.text!) { (user, error) in
+                if (error != nil) {
+                    if let errCode = FIRAuthErrorCode(rawValue: error!._code) {
+                        switch errCode {
+                        case .errorCodeInvalidEmail:
+                            self.showWarningLabel(errorText: .invalidEmailAddress)
+                        case .errorCodeEmailAlreadyInUse:
+                            self.showWarningLabel(errorText: .emailInUse)
+                        case .errorCodeWrongPassword:
+                            self.showWarningLabel(errorText: .incorrectPassword)
+                        default:
+                            print("Create User Error: \(error)")
+                        }
+                    }
+                } else {
+                    self.performSegue(withIdentifier: "loginToMainScreen", sender: self)
+                }
             }
         }
+    }
+    
+    @IBAction func didTouchGoToLogin(_ sender: UIButton) {
+        if (self.currentMode == .signup) {
+            setUpLoginView()
+            self.currentMode = .login
+        } else if (self.currentMode == .login) {
+            setUpSignUpView()
+            self.currentMode = .signup
+        }
+    }
+    
+    func setUpLoginView() {
+        UIView.animate(withDuration: 0.4, animations: {
+            self.confirmPasswordLabel.alpha = 0.0
+            self.confirmPasswordTextField.alpha = 0.0
+            self.loginButton.setAttributedTitle(self.kerningForText(text: "GO TO SIGN UP", amount: 5.0), for: .normal)
+            self.signUpButton.setAttributedTitle(self.kerningForText(text: "LOGIN", amount: 5.0), for: .normal)
+            self.buttonDividerLabel.text = "-NEED AN ACCOUNT?-"
+        }, completion: { _ in
+        }
+        )
+    }
+    
+    func setUpSignUpView() {
+        UIView.animate(withDuration: 0.4, animations: {
+            self.confirmPasswordLabel.alpha = 1.0
+            self.confirmPasswordTextField.alpha = 1.0
+            self.loginButton.setAttributedTitle(self.kerningForText(text: "GO TO LOGIN", amount: 5.0), for: .normal)
+            self.signUpButton.setAttributedTitle(self.kerningForText(text: "SIGN UP", amount: 5.0), for: .normal)
+            self.buttonDividerLabel.text = "-ALREADY HAVE AN ACCOUNT?-"
+        }, completion: { _ in
+        }
+        )
     }
     
     func passwordsDoMatch() -> Bool {

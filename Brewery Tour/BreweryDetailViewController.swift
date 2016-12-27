@@ -47,9 +47,7 @@ class BreweryDetailViewController: UIViewController {
         navigationController?.navigationBar.shadowImage = UIImage()
         navigationController?.navigationBar.isTranslucent = true
         navigationController?.navigationBar.tintColor = UIColor.black
-        
-        
-        
+    
     }
 
     override func didReceiveMemoryWarning() {
